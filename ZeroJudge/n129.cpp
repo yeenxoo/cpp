@@ -7,7 +7,7 @@ int main() {
     cout.tie(NULL);
     int n, i;
     cin >> n;
-    vector<int> a(n+3);
+    vector<long long> a(n+3);
     a[0]=1;
     a[1]=2;
     a[2]=4;
@@ -17,4 +17,3 @@ int main() {
     cout << a[n-1] << endl;
 
 }
-
