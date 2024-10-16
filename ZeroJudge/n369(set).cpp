@@ -7,7 +7,7 @@ int main(){
     cin.tie(0);
     cout.tie(0);
     int n;
-    set<string> mail;
+    unordered_set<string> mail;
     string a, b;
     cin >> n;
     while(n--){
