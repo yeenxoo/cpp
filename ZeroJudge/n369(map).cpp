@@ -7,7 +7,7 @@ int main(){
     cin.tie(0);
     cout.tie(0);
     int n;
-    map<string,bool> mail;
+    unordered_map<string,bool> mail;
     string a, b;
     cin >> n;
     while(n--){
