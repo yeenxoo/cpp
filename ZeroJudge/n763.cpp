@@ -4,7 +4,6 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout.tie(NULL);
     deque <long long> numbers;
     long long n, m, temp;
     cin >> n;
