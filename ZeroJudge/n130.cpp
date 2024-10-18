@@ -3,8 +3,7 @@ using namespace std;
 char ch[1005][1005];
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    cin.tie(0);
     int n, m, k=0;
     cin >> n >> m;
     string s;
