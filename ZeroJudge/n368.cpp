@@ -5,8 +5,7 @@ bool cmp(long long x, long long y){
 }
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    cin.tie(0);
     long long n, a, b, i, sum=0;
     cin >> n;
     vector<long long> numbers;
