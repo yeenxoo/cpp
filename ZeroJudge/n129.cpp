@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
     int n, i;
     cin >> n;
     vector<long long> a(n+3);
