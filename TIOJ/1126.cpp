@@ -3,7 +3,7 @@
 using namespace std;
 
 int check(string s, int l, int r){
-    while(s[l]==s[r]&&l>-1&&r<s.size()){
+    while(l>=0&&r<s.size()&&s[l]==s[r]){
         l--;
         r++;
     }
