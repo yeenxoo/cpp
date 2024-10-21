@@ -4,6 +4,8 @@ using namespace std;
 
 int main () {
     int n, m;
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
     while (cin >> n >> m) {
         vector<long long> food(n+1, 0);
         for (int i=1;i<=n;i++) {
