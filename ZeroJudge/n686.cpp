@@ -11,9 +11,9 @@ int main(){
     vector<int> next;
     for(int i=0;i<n;i++){
         cin >> pos;
-        next[n]=pos;
+        next.push_back(pos);
     }
-    for(i=0;i<n;i++){
+    for(int i=0;i<n;i++){
         cin >> pos;
         m[next[i]]=pos;
     }
@@ -22,7 +22,7 @@ int main(){
             maxR=it->first+it->second;
             continue;
         }
-        if(it->first<=k) maxR=max(maxR,it->first+it->second);
+        if(it->first<=maxR) maxR=max(maxR,it->first+it->second);
     }
     cout << maxR;
 }
