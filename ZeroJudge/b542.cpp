@@ -16,8 +16,7 @@ int main(){
         cin >> a;
         int left=0, right=1, diff;
         bool found=0;
-        while(left<=right){
-            if(right>=n) break;
+        while(right<n){
             diff=v[right]-v[left];
             if(diff==a){
                 found=1;
@@ -25,6 +24,7 @@ int main(){
             }
             else if(diff<a) right++;
             else left++;
+            if(left==right) right++;
         }
         if(found==0) cout << "NO\n";
         else cout << "YES\n";
