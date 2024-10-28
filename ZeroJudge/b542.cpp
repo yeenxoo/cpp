@@ -1,28 +1,32 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+
 using namespace std;
 
-const int N = 1e5 + 5;
-int a[N];
-
 int main(){
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	bool f;
-	int n, q, k, l;
-	cin >> n >> q;
-	for(int i = 0; i < n; ++i) cin >> a[i];
-	sort(a, a + n);
-	while(q--){
-		cin >> k;
-		f = l = 0;
-		for(int r = 0; r < n; ++l){
-			while(a[r] - a[l] > k) ++l;
-			if(a[r] - a[l] == k){
-				f = true;
-				break;
-			}
-		}
-		cout << (f ? "YES\n" : "NO\n");
-	}
-	return 0;
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int n, q, a;
+    cin >> n >> q;
+    vector<int> v(n);
+    for(int i=0;i<n;i++){
+        cin >> v[i];
+    }
+    sort(v.begin(),v.end());
+    while(q--){
+        cin >> a;
+        int left=0, right=1, diff;
+        bool found=0;
+        while(left<=right){
+            if(right>=n) break;
+            diff=v[right]-v[left];
+            if(diff==a){
+                found=1;
+                break;
+            }
+            else if(diff<a) right++;
+            else left++;
+        }
+        if(found==0) cout << "NO\n";
+        else cout << "YES\n";
+    }
 }
